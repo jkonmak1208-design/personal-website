@@ -119,21 +119,15 @@ export default function Home() {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-serif font-bold text-foreground">Research Areas</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {[
-                    "International Economics",
-                    "Trade Policy",
-                    "Intellectual Property Rights",
-                    "Innovation & Economic Growth",
-                    "Global Supply Chains",
-                    "Institutional Economics"
-                  ].map((area, idx) => (
-                    <div key={idx} className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20">
-                      <span className="text-sm font-medium text-primary">{area}</span>
-                    </div>
-                  ))}
-                </div>
+                <h3 className="text-xl font-serif font-bold text-foreground">Research Interests</h3>
+                <ul className="list-disc list-outside pl-6 space-y-2 text-foreground">
+                  <li>International Trade &amp; Trade Policy</li>
+                  <li>Intellectual Property Rights &amp; Innovation</li>
+                  <li>Institutions, Law, and Economic Development</li>
+                  <li>Global Value Chains &amp; Supply Chain Resilience</li>
+                  <li>Industrial Policy &amp; Structural Transformation</li>
+                  <li>Firm Behavior, Productivity, and Technology Adoption</li>
+                </ul>
               </div>
           </div>
         </div>
