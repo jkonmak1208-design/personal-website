@@ -37,6 +37,13 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-6">
+              <div className="mb-4">
+                <img
+                  src="/JosephMaiPortrait.jpg"
+                  alt="Joseph Mai"
+                  className="w-40 h-40 rounded-full object-cover border-4 border-accent/20 shadow-lg"
+                />
+              </div>
               <div className="space-y-2">
                 <p className="text-sm font-medium text-accent uppercase tracking-wider">Welcome to my website</p>
               </div>
