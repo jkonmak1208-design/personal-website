@@ -143,36 +143,32 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="space-y-4">
-              {[
-                {
-                  title: "Trade Circumvention in Free Trade Areas",
-                  journal: "Journal of International Money and Finance, 2025",
-                  authors: "With Deng Jianpeng, Jialin Li, Yanmin Shi, and Linke Zhu"
-                },
-                {
-                  title: "A Proposed Tax Reform for China: Enhancing Consumption and Pension Sustainability",
-                  journal: "China Economic Review, 2025",
-                  authors: "With David Leung and Zhaoyong Chen"
-                },
-                {
-                  title: "Anti-foreign Bias in the Court: Welfare Explanation and Evidence from Canadian Intellectual Property Litigation",
-                  journal: "Journal of International Economics, 2019",
-                  authors: "With Andrey Stoyanov"
-                },
-                {
-                  title: "The Effect of the Canada-US Free Trade Agreement on Canadian Trade Policy",
-                  journal: "Canadian Journal of Economics, 2015",
-                  authors: "With Andrey Stoyanov"
-                }
-              ].map((pub, idx) => (
-                <div key={idx} className="p-4 border-l-4 border-accent bg-secondary/20 rounded-r-lg">
-                  <h3 className="font-serif font-bold text-foreground mb-1">{pub.title}</h3>
-                  <p className="text-sm text-accent font-medium mb-1">{pub.journal}</p>
-                  <p className="text-sm text-muted-foreground">{pub.authors}</p>
-                </div>
-              ))}
-            </div>
+            <ol className="list-decimal list-outside pl-6 space-y-3">
+              <li className="text-foreground">
+                <span className="font-medium">"Trade Circumvention in Free Trade Areas"</span>
+                <span className="text-muted-foreground"> — With Deng Jianpeng, Jialin Li, Yanmin Shi, and Linke Zhu. </span>
+                <span className="text-accent font-medium italic">Journal of International Money and Finance</span>
+                <span className="text-muted-foreground">, 2025.</span>
+              </li>
+              <li className="text-foreground">
+                <span className="font-medium">"A Proposed Tax Reform for China: Enhancing Consumption and Pension Sustainability"</span>
+                <span className="text-muted-foreground"> — With David Leung and Zhaoyong Chen. </span>
+                <span className="text-accent font-medium italic">China Economic Review</span>
+                <span className="text-muted-foreground">, 2025.</span>
+              </li>
+              <li className="text-foreground">
+                <span className="font-medium">"Anti-foreign Bias in the Court: Welfare Explanation and Evidence from Canadian Intellectual Property Litigation"</span>
+                <span className="text-muted-foreground"> — With Andrey Stoyanov. </span>
+                <span className="text-accent font-medium italic">Journal of International Economics</span>
+                <span className="text-muted-foreground">, 2019.</span>
+              </li>
+              <li className="text-foreground">
+                <span className="font-medium">"The Effect of the Canada-US Free Trade Agreement on Canadian Trade Policy"</span>
+                <span className="text-muted-foreground"> — With Andrey Stoyanov. </span>
+                <span className="text-accent font-medium italic">Canadian Journal of Economics</span>
+                <span className="text-muted-foreground">, 2015.</span>
+              </li>
+            </ol>
           </div>
         </div>
       </section>
@@ -188,81 +184,40 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="space-y-4">
-              {[
-                {
-                  title: "Tariff Cooperation in Free Trade Area",
-                  status: "Working Paper",
-                  authors: "With Andrey Stoyanov"
-                },
-                {
-                  title: "A Quiet Revolution: International Trade and Women Empowerment",
-                  status: "Working Paper",
-                  authors: "With Xiaoming Cai and Yun Dai"
-                },
-                {
-                  title: "Stronger IP, Fewer Imports: How Legal Reform Drives Domestic Substitution in Global Value Chains",
-                  status: "Under Review",
-                  authors: "With Lihao Wang"
-                },
-                {
-                  title: "WTO Entry and the Effect of the TRIPS: Evidence from China Intellectual Property Litigations",
-                  status: "Reject and Resubmit",
-                  authors: "With Yanmin Shi"
-                },
-                {
-                  title: "Land Price, Firm Sorting, and the Dynamics of Firm Productivity",
-                  status: "Working Paper",
-                  authors: "With David Leung"
-                },
-                {
-                  title: "Digital Transformation and Global Supply Chain Resilience: Evidence from China",
-                  status: "Under Review",
-                  authors: "With Haoyuan Ding, Wenjuan Dong, and Junjie Tang"
-                },
-                {
-                  title: "Intellectual Property Enforcement and Economic Geography: Evidence from Firm Location Decisions in China",
-                  status: "R&R",
-                  authors: "With Yanmin Shi"
-                },
-                {
-                  title: "Gains from Intellectual Property Protection: Innovation, Market Power, Competition in China",
-                  status: "Working Paper",
-                  authors: "With Haoyuan Ding, Lihao Wang and Yanmin Shi"
-                },
-                {
-                  title: "Beyond Punishment: Anti-Dumping as Endogenous Trade Policy",
-                  status: "Working Paper",
-                  authors: "With Xiaohua Bao and Xiaozhuo Wang"
-                },
-                {
-                  title: "Linguistic Bridges: The Impact of New Official Languages on International Trade",
-                  status: "R&R",
-                  authors: "With Xiaohua Bao and Xin Zhao"
-                },
-                {
-                  title: "Global Integration and Domestic Institutions: WTO Accession and IPR Enforcement in China",
-                  status: "Working Paper",
-                  authors: "With Haoyuan Ding, Shu Lin, and Yanmin Shi"
-                },
-                {
-                  title: "IP Litigation Spillovers",
-                  status: "Working Paper",
-                  authors: "With Richard Kneller and Min Zhu"
-                },
-                {
-                  title: "Bridging Knowledge Pools: Tech-Transfer Center and Breakthrough Innovations",
-                  status: "Under Review",
-                  authors: "With Weiping Xie"
-                }
-              ].map((paper, idx) => (
-                <div key={idx} className="p-4 border-l-4 border-primary bg-background rounded-r-lg">
-                  <h3 className="font-serif font-bold text-foreground mb-1">{paper.title}</h3>
-                  <p className="text-sm text-primary font-medium mb-1">{paper.status}</p>
-                  <p className="text-sm text-muted-foreground">{paper.authors}</p>
-                </div>
-              ))}
-            </div>
+            <ol className="list-decimal list-outside pl-6 space-y-3">
+              <li className="text-foreground">
+                <span className="font-medium">"A Quiet Revolution: International Trade and Women Empowerment"</span>
+                <span className="text-muted-foreground"> — With Xiaoming Cai and Yun Dai.</span>
+              </li>
+              <li className="text-foreground">
+                <span className="font-medium">"WTO Entry and the Effect of the TRIPS: Evidence from China Intellectual Property Litigations"</span>
+                <span className="text-muted-foreground"> — With Yanmin Shi.</span>
+              </li>
+              <li className="text-foreground">
+                <span className="font-medium">"Digital Transformation and Global Supply Chain Resilience: Evidence from China"</span>
+                <span className="text-muted-foreground"> — With Haoyuan Ding, Wenjuan Dong, and Junjie Tang.</span>
+              </li>
+              <li className="text-foreground">
+                <span className="font-medium">"Intellectual Property Enforcement and Economic Geography: Evidence from Firm Location Decisions in China"</span>
+                <span className="text-muted-foreground"> — With Yanmin Shi.</span>
+              </li>
+              <li className="text-foreground">
+                <span className="font-medium">"Gains from Intellectual Property Protection: Innovation, Market Power, Competition in China"</span>
+                <span className="text-muted-foreground"> — With Haoyuan Ding, Lihao Wang and Yanmin Shi.</span>
+              </li>
+              <li className="text-foreground">
+                <span className="font-medium">"Linguistic Bridges: The Impact of New Official Languages on International Trade"</span>
+                <span className="text-muted-foreground"> — With Xiaohua Bao and Xin Zhao.</span>
+              </li>
+              <li className="text-foreground">
+                <span className="font-medium">"Global Integration and Domestic Institutions: WTO Accession and IPR Enforcement in China"</span>
+                <span className="text-muted-foreground"> — With Haoyuan Ding, Shu Lin, and Yanmin Shi.</span>
+              </li>
+              <li className="text-foreground">
+                <span className="font-medium">"IP Litigation Spillovers"</span>
+                <span className="text-muted-foreground"> — With Richard Kneller and Min Zhu.</span>
+              </li>
+            </ol>
           </div>
         </div>
       </section>
