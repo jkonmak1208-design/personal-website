@@ -1,0 +1,16 @@
+.git
+.gitignore
+.env.local
+.env.*.local
+node_modules
+.pnpm-store
+dist
+build
+.DS_Store
+*.log
+.vscode
+.idea
+.next
+out
+coverage
+.turbo
