@@ -82,14 +82,6 @@ export default function Home() {
                 <span className="block">I am an Associate Professor of Economics specializing in international trade, intellectual property rights, and institutional development. My research examines how trade policy, legal enforcement, and industrial upgrading shape firm behavior, innovation, and global supply chain dynamics, with a particular focus on emerging economies.</span>
                 <span className="block">This website provides information about my research projects, publications, teaching, and ongoing academic work. I welcome scholarly collaboration and discussion.</span>
               </p>
-              <div className="flex gap-4 pt-4">
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  View My Work
-                </Button>
-                <Button variant="outline" className="border-border hover:bg-secondary">
-                  Download CV
-                </Button>
-              </div>
             </div>
 
           </div>
