@@ -180,25 +180,25 @@ export default function Home() {
                 title={`"Trade Circumvention in Free Trade Areas"`}
                 authors="With Deng Jianpeng, Jialin Li, Yanmin Shi, and Linke Zhu"
                 journal="Journal of International Money and Finance, 2025"
-                abstract="Abstract coming soon."
+                abstract="Do Regional Trade Agreements (RTAs) incentivize non-member countries to engage in trade circumvention through member countries, and how much does this behavior contribute to increased trade among RTA members? This paper provides empirical evidence on the prevalence of illicit transshipment through RTAs and quantifies its contribution to trade growth in a case study of NAFTA. Using global trade data and guided by a discrete choice model of shipment methods, we estimate the causal impact of tariff differentials created by RTAs on illicit transshipment, inferred from trade discrepancies. Our results show that circumvention increases more for products with larger preferential margins after the establishment of an RTA, with re-exports serving as a key channel. We also find substantial heterogeneity in these effects. In the case of NAFTA, we find that trade circumvention contributed to 16.4% of the increase in U.S. imports from Mexico in 2018, when the U.S. returned to protectionist policies."
               />
               <PublicationItem
                 title={`"A Proposed Tax Reform for China: Enhancing Consumption and Pension Sustainability"`}
                 authors="With David Leung and Zhaoyong Chen"
                 journal="China Economic Review, 2025"
-                abstract="Abstract coming soon."
+                abstract="China faces dual challenges of an aging population and low household consumption. This study proposes shifting the tax burden from income to consumption to stimulate domestic demand and support pension sustainability. Using a heterogeneous-agent overlapping generations (OLG) model calibrated to Chinese data with earnings and health risks, we quantify the effects on output, labor supply, capital accumulation, consumption, and pension expenditures. Our analysis confirms that consumption taxes distort savings less than income taxes. Transitioning to consumption taxation raises disposable income, more than offsetting the associated costs, and increases consumption among all working-age cohorts. Welfare improves for both new generations and the broader population, affirming the reform's efficacy in an aging economy."
               />
               <PublicationItem
                 title={`"Anti-foreign Bias in the Court: Welfare Explanation and Evidence from Canadian Intellectual Property Litigation"`}
                 authors="With Andrey Stoyanov"
                 journal="Journal of International Economics, 2019"
-                abstract="Abstract coming soon."
+                abstract="Are judges concerned, in the same way as policy makers, with the effects of their decisions on national welfare? In this paper, we analyze this question by examining the outcomes of intellectual property rights (IPR) litigations between domestic and foreign firms. We use a simple model of oligopoly, in which IPR takes the form of a more efficient production technology, to illustrate how antiforeign bias varies across cases when judges have welfare concerns. The predictions of the model are tested using data on all Canadian IPR cases over a four-year period. We find that foreign firms have about 25 percentage points lower probability of protecting their IPR in Canadian courts relative to domestic firms. We also find that courts' decisions are aligned with national welfare maximization principles so that foreign firms are less likely to win in those cases when the implied welfare gains from not protecting foreign IPR are greater. These findings are robust to controlling for endogenous selection of firms into litigation."
               />
               <PublicationItem
-                title={`"The Effect of the Canada-US Free Trade Agreement on Canadian Trade Policy"`}
+                title={`"The Effect of the Canada-US Free Trade Agreement on Canadian Multilateral Trade Liberalization"`}
                 authors="With Andrey Stoyanov"
                 journal="Canadian Journal of Economics, 2015"
-                abstract="Abstract coming soon."
+                abstract="In this paper we show that the Canada-US Free Trade Agreement (CUSFTA) tariff preferences have triggered a decline in Canadian external tariffs, explaining a two percentage point reduction in the average tariff between 1989 and 1998. We find that industries generating minimal export income to US firms experienced larger tariff reductions in Canada, suggesting bilateral trade policy cooperation. However, we find no connection between preferential trade liberalization and the intensity of industrial lobbying activities in Canada regarding trade policy matters."
               />
             </ol>
           </div>
