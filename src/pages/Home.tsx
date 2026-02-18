@@ -41,6 +41,33 @@ function PublicationItem({ title, authors, journal, abstract }: {
   );
 }
 
+function WorkingPaperItem({ title, authors, abstract }: {
+  title: string;
+  authors: string;
+  abstract: string;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <li className="text-foreground">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="text-left inline"
+      >
+        <span className="font-medium text-primary hover:text-accent transition-colors underline decoration-primary/30 hover:decoration-accent cursor-pointer">
+          {title}
+        </span>
+        <ChevronDown className={`inline-block w-4 h-4 ml-1 text-primary transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+      <span className="text-muted-foreground"> — {authors}.</span>
+      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"}`}>
+        <p className="text-sm text-muted-foreground leading-relaxed pr-4 pb-2 border-l-2 border-accent/30 pl-3">
+          {abstract}
+        </p>
+      </div>
+    </li>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -261,6 +288,11 @@ export default function Home() {
                 <span className="font-medium">"Why FTAs Diverge: Political Affinity and External Trade Protection"</span>
                 <span className="text-muted-foreground"> — With Xiaohua Bao and Xiaozhou Wang.</span>
               </li>
+              <WorkingPaperItem
+                title={`"When Numbers Lie: GDP Manipulation and Export Misallocation"`}
+                authors="With Jin Sun"
+                abstract="When local officials inflate GDP for career advancement, the resulting distortions extend beyond statistics into the real economy. We study an officially confirmed case of GDP falsification in Weihai, China, where the Party Secretary directed firms to inflate output data in exchange for preferential allocation of export VAT rebates. We develop a heterogeneous-firm trade model that formalizes this mechanism and delivers a sufficient statistics formula for welfare quantification. The model predicts that small firms—excluded from the falsification scheme—face delayed rebates and reduced export participation, while large complicit firms are unaffected. Difference-in-differences estimates confirm these predictions: GDP manipulation lowers small-firm export probability by 2.1 percentage points, operating through rebate delays in eligible industries. The implied tariff equivalent on affected firms is 6.8%. A calibration exercise yields a baseline welfare loss of 2.22%, robust across trade elasticities (θ ∈ [3,5]) and leave-one-city-out sensitivity checks."
+              />
             </ol>
           </div>
         </div>
