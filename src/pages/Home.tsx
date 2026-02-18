@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, MapPin, ExternalLink, BookOpen, Users, FileText } from "lucide-react";
+import { Mail, MapPin, ExternalLink, BookOpen, Users, FileText, ChevronDown } from "lucide-react";
 
 /**
  * Modern Academic Minimalism Design
@@ -9,6 +10,36 @@ import { Mail, MapPin, ExternalLink, BookOpen, Users, FileText } from "lucide-re
  * - Asymmetric layout with generous whitespace
  * - Left sidebar navigation, content-focused design
  */
+
+function PublicationItem({ title, authors, journal, abstract }: {
+  title: string;
+  authors: string;
+  journal: string;
+  abstract: string;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <li className="text-foreground">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="text-left inline"
+      >
+        <span className="font-medium text-primary hover:text-accent transition-colors underline decoration-primary/30 hover:decoration-accent cursor-pointer">
+          {title}
+        </span>
+        <ChevronDown className={`inline-block w-4 h-4 ml-1 text-primary transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+      <span className="text-muted-foreground"> — {authors}. </span>
+      <span className="text-accent font-medium italic">{journal.split(",")[0]}</span>
+      <span className="text-muted-foreground">, {journal.split(",").slice(1).join(",").trim()}.</span>
+      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"}`}>
+        <p className="text-sm text-muted-foreground leading-relaxed pl-0 pr-4 pb-2 border-l-2 border-accent/30 ml-0 pl-3">
+          {abstract}
+        </p>
+      </div>
+    </li>
+  );
+}
 
 export default function Home() {
   return (
@@ -144,31 +175,31 @@ export default function Home() {
               </p>
             </div>
 
-            <ol className="list-decimal list-outside pl-6 space-y-3">
-              <li className="text-foreground">
-                <span className="font-medium">"Trade Circumvention in Free Trade Areas"</span>
-                <span className="text-muted-foreground"> — With Deng Jianpeng, Jialin Li, Yanmin Shi, and Linke Zhu. </span>
-                <span className="text-accent font-medium italic">Journal of International Money and Finance</span>
-                <span className="text-muted-foreground">, 2025.</span>
-              </li>
-              <li className="text-foreground">
-                <span className="font-medium">"A Proposed Tax Reform for China: Enhancing Consumption and Pension Sustainability"</span>
-                <span className="text-muted-foreground"> — With David Leung and Zhaoyong Chen. </span>
-                <span className="text-accent font-medium italic">China Economic Review</span>
-                <span className="text-muted-foreground">, 2025.</span>
-              </li>
-              <li className="text-foreground">
-                <span className="font-medium">"Anti-foreign Bias in the Court: Welfare Explanation and Evidence from Canadian Intellectual Property Litigation"</span>
-                <span className="text-muted-foreground"> — With Andrey Stoyanov. </span>
-                <span className="text-accent font-medium italic">Journal of International Economics</span>
-                <span className="text-muted-foreground">, 2019.</span>
-              </li>
-              <li className="text-foreground">
-                <span className="font-medium">"The Effect of the Canada-US Free Trade Agreement on Canadian Trade Policy"</span>
-                <span className="text-muted-foreground"> — With Andrey Stoyanov. </span>
-                <span className="text-accent font-medium italic">Canadian Journal of Economics</span>
-                <span className="text-muted-foreground">, 2015.</span>
-              </li>
+            <ol className="list-decimal list-outside pl-6 space-y-4">
+              <PublicationItem
+                title={`"Trade Circumvention in Free Trade Areas"`}
+                authors="With Deng Jianpeng, Jialin Li, Yanmin Shi, and Linke Zhu"
+                journal="Journal of International Money and Finance, 2025"
+                abstract="Abstract coming soon."
+              />
+              <PublicationItem
+                title={`"A Proposed Tax Reform for China: Enhancing Consumption and Pension Sustainability"`}
+                authors="With David Leung and Zhaoyong Chen"
+                journal="China Economic Review, 2025"
+                abstract="Abstract coming soon."
+              />
+              <PublicationItem
+                title={`"Anti-foreign Bias in the Court: Welfare Explanation and Evidence from Canadian Intellectual Property Litigation"`}
+                authors="With Andrey Stoyanov"
+                journal="Journal of International Economics, 2019"
+                abstract="Abstract coming soon."
+              />
+              <PublicationItem
+                title={`"The Effect of the Canada-US Free Trade Agreement on Canadian Trade Policy"`}
+                authors="With Andrey Stoyanov"
+                journal="Canadian Journal of Economics, 2015"
+                abstract="Abstract coming soon."
+              />
             </ol>
           </div>
         </div>
