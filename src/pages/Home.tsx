@@ -281,9 +281,11 @@ export default function Home() {
               </div>
             </div>
 
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6">
-              Send Message
-            </Button>
+            <a href="mailto:josephm@mail.shufe.edu.cn">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6">
+                Send Message
+              </Button>
+            </a>
           </div>
         </div>
       </section>
