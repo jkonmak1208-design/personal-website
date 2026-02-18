@@ -249,6 +249,10 @@ export default function Home() {
                 <span className="font-medium">"IP Litigation Spillovers"</span>
                 <span className="text-muted-foreground"> — With Richard Kneller and Min Zhu.</span>
               </li>
+              <li className="text-foreground">
+                <span className="font-medium">"Why FTAs Diverge: Political Affinity and External Trade Protection"</span>
+                <span className="text-muted-foreground"> — With Xiaohua Bao and Xiaozhou Wang.</span>
+              </li>
             </ol>
           </div>
         </div>
