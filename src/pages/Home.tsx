@@ -152,6 +152,22 @@ export default function Home() {
                   <li>Firm Behavior, Productivity, and Technology Adoption</li>
                 </ul>
               </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-serif font-bold text-foreground">Recent Research Focus</h3>
+                <ul className="list-disc list-outside pl-6 space-y-2 text-foreground">
+                  <li>
+                    <a
+                      href="/media/How_US_Pressure_Forced_Canadas_EV_Tariffs.m4a"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-primary hover:text-accent transition-colors underline decoration-primary/30 hover:decoration-accent"
+                    >
+                      FTA with a Hegemon
+                    </a>
+                  </li>
+                </ul>
+              </div>
           </div>
         </div>
       </section>
