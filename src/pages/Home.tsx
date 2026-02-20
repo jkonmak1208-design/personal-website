@@ -288,6 +288,7 @@ export default function Home() {
               </li>
               <li className="text-foreground">
                 <span className="font-medium">"Linguistic Bridges: The Impact of New Official Languages on International Trade"</span>
+                <span className="text-xs font-medium text-accent ml-1">[R&amp;R, World Economy]</span>
                 <span className="text-muted-foreground"> — With Xiaohua Bao and Xin Zhao.</span>
               </li>
               <li className="text-foreground">
