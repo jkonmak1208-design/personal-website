@@ -299,10 +299,11 @@ export default function Home() {
                 <span className="font-medium">"IP Litigation Spillovers"</span>
                 <span className="text-muted-foreground"> — With Richard Kneller and Min Zhu.</span>
               </li>
-              <li className="text-foreground">
-                <span className="font-medium">"Why FTAs Diverge: Political Affinity and External Trade Protection"</span>
-                <span className="text-muted-foreground"> — With Xiaohua Bao and Xiaozhou Wang.</span>
-              </li>
+              <WorkingPaperItem
+                title={`"Political Affinity and the Stumbling Block Puzzle: Evidence from Antidumping"`}
+                authors="With Xiaohua Bao and Xiaozhou Wang"
+                abstract="Do free trade agreements raise or lower antidumping protection against non-members? We show the answer depends on political affinity between FTA partners. In a monopolistic competition model, politically close partners internalize each other's export profits, creating a stumbling block channel that raises external antidumping, counteracting the standard tariff complementarity (building block) channel. The model predicts that the net effect varies with import demand elasticity: stumbling blocks arise where protection is cheap (low elasticity), while building blocks dominate where it is costly (high elasticity). Using bilateral antidumping data covering 1990–2015, we confirm this heterogeneity empirically (p < 0.01 for the elasticity interaction; Wald test p = 0.031), reconciling the conflicting findings in the prior literature. Counterfactual exercises and welfare calibrations quantify the channels and their policy implications."
+              />
               <WorkingPaperItem
                 title={`"Fake Growth, Real Distortions: GDP Manipulation, Export Rebate Delays, and Welfare Losses"`}
                 authors="With Jin Sun"
