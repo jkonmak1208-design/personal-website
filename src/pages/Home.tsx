@@ -41,11 +41,12 @@ function PublicationItem({ title, authors, journal, abstract }: {
   );
 }
 
-function WorkingPaperItem({ title, authors, abstract, slidesUrl }: {
+function WorkingPaperItem({ title, authors, abstract, slidesUrl, status }: {
   title: string;
   authors: string;
   abstract: string;
   slidesUrl?: string;
+  status?: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -70,6 +71,9 @@ function WorkingPaperItem({ title, authors, abstract, slidesUrl }: {
           <Presentation className="w-4 h-4" />
           <span className="text-xs font-medium">Slides</span>
         </a>
+      )}
+      {status && (
+        <span className="text-xs font-medium text-accent ml-1">[{status}]</span>
       )}
       <span className="text-muted-foreground"> — {authors}.</span>
       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"}`}>
@@ -286,11 +290,12 @@ export default function Home() {
                 <span className="font-medium">"Gains from Intellectual Property Protection: Innovation, Market Power, Competition in China"</span>
                 <span className="text-muted-foreground"> — With Haoyuan Ding, Lihao Wang and Yanmin Shi.</span>
               </li>
-              <li className="text-foreground">
-                <span className="font-medium">"Linguistic Bridges: The Impact of New Official Languages on International Trade"</span>
-                <span className="text-xs font-medium text-accent ml-1">[R&amp;R, World Economy]</span>
-                <span className="text-muted-foreground"> — With Xiaohua Bao and Xin Zhao.</span>
-              </li>
+              <WorkingPaperItem
+                title={`"Linguistic Bridges: The Impact of New Official Languages on International Trade"`}
+                authors="With Xiaohua Bao and Xin Zhao"
+                status="R&R, World Economy"
+                abstract="We estimate the effect of official language adoption on bilateral exports using a difference-in-differences design that exploits 49 policy changes across 31 countries (1996–2019). Controlling for exporter-year, importer-year, and country-pair fixed effects, PPML estimates imply that sharing a newly adopted official language increases exports by 20.6%. Event-study diagnostics show no pre-trends; placebo tests suggest the effect is unlikely to reflect spurious correlation. The effect concentrates in communication-intensive sectors—industries with high O*NET communication scores, high contract intensity, and differentiated products—consistent with reduced information frictions rather than political alignment. A general-equilibrium counterfactual maps the estimate to a 2.91% reduction in ad valorem trade costs."
+              />
               <li className="text-foreground">
                 <span className="font-medium">"Global Integration and Domestic Institutions: WTO Accession and IPR Enforcement in China"</span>
                 <span className="text-muted-foreground"> — With Haoyuan Ding, Shu Lin, and Yanmin Shi.</span>
