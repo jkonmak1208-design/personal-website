@@ -279,6 +279,7 @@ export default function Home() {
               </li>
               <li className="text-foreground">
                 <span className="font-medium">"Intellectual Property Enforcement and Economic Geography: Evidence from Firm Location Decisions in China"</span>
+                <span className="text-xs font-medium text-accent ml-1">[R&amp;R, Canadian Journal of Economics]</span>
                 <span className="text-muted-foreground"> — With Yanmin Shi.</span>
               </li>
               <li className="text-foreground">
