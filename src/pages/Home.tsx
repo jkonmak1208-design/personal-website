@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, MapPin, ExternalLink, BookOpen, Users, FileText, ChevronDown, Presentation } from "lucide-react";
+import { Mail, MapPin, ExternalLink, BookOpen, Users, FileText, ChevronDown, Presentation, Headphones } from "lucide-react";
 
 /**
  * Modern Academic Minimalism Design
@@ -41,11 +41,12 @@ function PublicationItem({ title, authors, journal, abstract }: {
   );
 }
 
-function WorkingPaperItem({ title, authors, abstract, slidesUrl, status }: {
+function WorkingPaperItem({ title, authors, abstract, slidesUrl, audioUrl, status }: {
   title: string;
   authors: string;
   abstract: string;
   slidesUrl?: string;
+  audioUrl?: string;
   status?: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,6 +71,18 @@ function WorkingPaperItem({ title, authors, abstract, slidesUrl, status }: {
         >
           <Presentation className="w-4 h-4" />
           <span className="text-xs font-medium">Slides</span>
+        </a>
+      )}
+      {audioUrl && (
+        <a
+          href={audioUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 ml-2 text-accent hover:text-primary transition-colors"
+          title="Listen to audio"
+        >
+          <Headphones className="w-4 h-4" />
+          <span className="text-xs font-medium">Audio</span>
         </a>
       )}
       {status && (
@@ -320,6 +333,7 @@ export default function Home() {
                 title={`"Dialect Networks and Labor Market Sorting Among Internal Migrants in China"`}
                 authors="With Ying Tie and Di Yan"
                 slidesUrl="/slides/Dialect.pdf"
+                audioUrl="/media/Speaking_Local_Dialects_Lowers_Wages_in_China.m4a"
                 abstract="Does the local dialect help or hurt migrants in the labor market? Using matched employer-employee data on 13,700 workers across 15 Chinese cities (2013–2019), we decompose the wage associations of two distinct linguistic dimensions—local dialect proficiency and Mandarin—into between-firm and within-firm components. Local dialect proficiency is associated with 1.9 percent lower wages between firms but zero differential within the same firm—a 92 percent attenuation consistent with the dialect–wage relationship operating entirely through firm-level sorting. Mandarin proficiency, by contrast, attenuates by only 36 percent, retaining a positive within-firm coefficient consistent with a direct productivity channel. A dual-channel recruitment model rationalizes this pattern: dialect networks channel migrants into lower-paying informal-hiring firms, while formal channels select into higher-paying employers. Supporting evidence shows that dialect-proficient workers cluster within firms far beyond chance, the sorting pattern is absent for local workers and operates within broad industries, and a counterfactual exercise implies a sorting wage cost of 3–4 percent. Dialect and the national language affect migrant wages through fundamentally different channels—sorting versus productivity."
               />
             </ol>
