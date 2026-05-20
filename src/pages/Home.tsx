@@ -301,6 +301,7 @@ export default function Home() {
               </li>
               <li className="text-foreground">
                 <span className="font-medium">"Gains from Intellectual Property Protection: Innovation, Market Power, Competition in China"</span>
+                <span className="text-xs font-medium text-accent ml-1">[R&amp;R, Journal of International Money and Finance]</span>
                 <span className="text-muted-foreground"> — With Haoyuan Ding, Lihao Wang and Yanmin Shi.</span>
               </li>
               <WorkingPaperItem
