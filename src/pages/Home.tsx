@@ -242,6 +242,18 @@ export default function Home() {
 
             <ol className="list-decimal list-outside pl-6 space-y-4">
               <PublicationItem
+                title={`"Linguistic Bridges: The Impact of New Official Languages on International Trade"`}
+                authors="With Xiaohua Bao and Xin Zhao"
+                journal="World Economy, forthcoming"
+                abstract="We estimate the effect of official language adoption on bilateral exports using a difference-in-differences design that exploits 49 policy changes across 31 countries (1996–2019). Controlling for exporter-year, importer-year, and country-pair fixed effects, PPML estimates imply that sharing a newly adopted official language increases exports by 20.6%. Event-study diagnostics show no pre-trends; placebo tests suggest the effect is unlikely to reflect spurious correlation. The effect concentrates in communication-intensive sectors—industries with high O*NET communication scores, high contract intensity, and differentiated products—consistent with reduced information frictions rather than political alignment. A general-equilibrium counterfactual maps the estimate to a 2.91% reduction in ad valorem trade costs."
+              />
+              <PublicationItem
+                title={`"Intellectual Property Enforcement and Economic Geography: Evidence from Firm Location Decisions in China"`}
+                authors="With Yanmin Shi"
+                journal="Canadian Journal of Economics, forthcoming"
+                abstract="We study how subnational variation in intellectual property rights (IPR) enforcement shapes the location choices of entrants in China. We construct a city-year index of IPR enforcement from court outcomes in IP-related cases and combine it with data on new firm entry from 1998 to 2008. We show that stronger local IPR enforcement disproportionately raises entry in more IP-intensive industries (such as patent-intensive and high-technology sectors) relative to less IP-intensive sectors, thereby shifting the composition of entrants toward more knowledge-intensive activities. To address the endogeneity of enforcement, we instrument for IPR enforcement using a historical exposure index based on missionary presence and British settlement exposure. The results indicate that local judicial quality helps shape the spatial allocation of innovative activity and suggest that upgrading IPR enforcement in lagging regions can serve as an effective place-based industrial policy."
+              />
+              <PublicationItem
                 title={`"Trade Circumvention in Free Trade Areas"`}
                 authors="With Deng Jianpeng, Jialin Li, Yanmin Shi, and Linke Zhu"
                 journal="Journal of International Money and Finance, 2025"
@@ -296,20 +308,9 @@ export default function Home() {
                 <span className="text-muted-foreground"> — With Haoyuan Ding, Wenjuan Dong, and Junjie Tang.</span>
               </li>
               <li className="text-foreground">
-                <span className="font-medium">"Intellectual Property Enforcement and Economic Geography: Evidence from Firm Location Decisions in China"</span>
-                <span className="text-xs font-medium text-accent ml-1">[R&amp;R, Canadian Journal of Economics]</span>
-                <span className="text-muted-foreground"> — With Yanmin Shi.</span>
-              </li>
-              <li className="text-foreground">
                 <span className="font-medium">"Gains from Intellectual Property Protection: Innovation, Market Power, Competition in China"</span>
                 <span className="text-muted-foreground"> — With Haoyuan Ding, Lihao Wang and Yanmin Shi.</span>
               </li>
-              <WorkingPaperItem
-                title={`"Linguistic Bridges: The Impact of New Official Languages on International Trade"`}
-                authors="With Xiaohua Bao and Xin Zhao"
-                status="R&R, World Economy"
-                abstract="We estimate the effect of official language adoption on bilateral exports using a difference-in-differences design that exploits 49 policy changes across 31 countries (1996–2019). Controlling for exporter-year, importer-year, and country-pair fixed effects, PPML estimates imply that sharing a newly adopted official language increases exports by 20.6%. Event-study diagnostics show no pre-trends; placebo tests suggest the effect is unlikely to reflect spurious correlation. The effect concentrates in communication-intensive sectors—industries with high O*NET communication scores, high contract intensity, and differentiated products—consistent with reduced information frictions rather than political alignment. A general-equilibrium counterfactual maps the estimate to a 2.91% reduction in ad valorem trade costs."
-              />
               <li className="text-foreground">
                 <span className="font-medium">"Global Integration and Domestic Institutions: WTO Accession and IPR Enforcement in China"</span>
                 <span className="text-muted-foreground"> — With Haoyuan Ding, Shu Lin, and Yanmin Shi.</span>
