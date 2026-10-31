@@ -235,9 +235,6 @@ export default function Home() {
           <div className="space-y-12">
             <div className="space-y-4">
               <h2 className="text-4xl font-serif font-bold text-foreground">Publications</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl">
-                Peer-reviewed journal articles and research publications
-              </p>
             </div>
 
             <ol className="list-decimal list-outside pl-6 space-y-4">
