@@ -11,11 +11,12 @@ import { Mail, MapPin, ExternalLink, BookOpen, Users, FileText, ChevronDown, Pre
  * - Left sidebar navigation, content-focused design
  */
 
-function PublicationItem({ title, authors, journal, abstract }: {
+function PublicationItem({ title, authors, journal, abstract, url }: {
   title: string;
   authors: string;
   journal: string;
   abstract: string;
+  url?: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -29,6 +30,18 @@ function PublicationItem({ title, authors, journal, abstract }: {
         </span>
         <ChevronDown className={`inline-block w-4 h-4 ml-1 text-primary transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
       </button>
+      {url && (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 ml-2 text-accent hover:text-primary transition-colors"
+          title="View published article"
+        >
+          <ExternalLink className="w-4 h-4" />
+          <span className="text-xs font-medium">DOI</span>
+        </a>
+      )}
       <span className="text-muted-foreground"> — {authors}. </span>
       <span className="text-accent font-medium italic">{journal.split(",")[0]}</span>
       <span className="text-muted-foreground">, {journal.split(",").slice(1).join(",").trim()}.</span>
@@ -239,10 +252,11 @@ export default function Home() {
 
             <ol className="list-decimal list-outside pl-6 space-y-4">
               <PublicationItem
-                title={`"Linguistic Bridges: The Impact of New Official Languages on International Trade"`}
+                title={`"Linguistic Bridge: The Impact of New Official Languages on International Trade"`}
                 authors="With Xiaohua Bao and Xin Zhao"
-                journal="World Economy, forthcoming"
-                abstract="We estimate the effect of official language adoption on bilateral exports using a difference-in-differences design that exploits 49 policy changes across 31 countries (1996–2019). Controlling for exporter-year, importer-year, and country-pair fixed effects, PPML estimates imply that sharing a newly adopted official language increases exports by 20.6%. Event-study diagnostics show no pre-trends; placebo tests suggest the effect is unlikely to reflect spurious correlation. The effect concentrates in communication-intensive sectors—industries with high O*NET communication scores, high contract intensity, and differentiated products—consistent with reduced information frictions rather than political alignment. A general-equilibrium counterfactual maps the estimate to a 2.91% reduction in ad valorem trade costs."
+                journal="The World Economy, 2026"
+                url="https://doi.org/10.1111/twec.70154"
+                abstract="We estimate the effect of official language adoption on bilateral exports using a difference-in-differences design that exploits 49 policy changes across 31 countries (1996–2019). With exporter-year, importer-year and country-pair fixed effects, PPML estimates imply that sharing a newly adopted official language increases exports by 20.6%. Event studies show no pre-trends, and placebo tests suggest the effect is unlikely to reflect spurious correlation. The effect is concentrated in communication-intensive sectors (those with high O*NET communication scores, high contract intensity and differentiated products), consistent with reduced information frictions rather than political alignment. A general-equilibrium counterfactual maps the estimate to a 2.91% reduction in ad valorem trade costs."
               />
               <PublicationItem
                 title={`"Intellectual Property Enforcement and Economic Geography: Evidence from Firm Location Decisions in China"`}
